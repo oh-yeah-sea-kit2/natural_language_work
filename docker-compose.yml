@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'python3'
+    working_dir: '/usr/src/app'
+    tty: true
+    volumes:
+      - ./opt:/usr/src/app/opt
+      - ./sample_data/assets/:/usr/src/app/assets
